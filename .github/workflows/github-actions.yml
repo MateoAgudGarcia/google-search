@@ -1,4 +1,4 @@
-name: GitHub Actions Demo
+name: GitHub Actions for Google Search
 on: [ push ]
 jobs:
   Google-Search:
@@ -10,9 +10,15 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 8
-      - name: Gradle make executable
-        run: chmod +x gradlew
+      - name: Build gradle project
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 7.2
+          arguments: build
       - name: Run tests
-        run: ./gradlew cucumber
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 7.2
+          arguments: cucumber
       - name: Status of job
         run: echo " Status is ${{ job.status }}."
