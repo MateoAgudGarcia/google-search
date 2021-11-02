@@ -10,6 +10,8 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 8
+      - name: Gradle make executable
+        run: chmod +x ./gradlew
       - name: Run tests
         run: ./gradlew cucumber
       - name: Status of job
