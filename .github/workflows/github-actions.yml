@@ -1,10 +1,18 @@
 name: GitHub Actions Demo
 on: [ push ]
 jobs:
-  Explore-GitHub-Actions:
+  Google-Search:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Running on a ${{ runner.os }}"
-      - name: Run on Google Chrome
-        run: ./gradlew cucumber
-      - run: echo " Status is ${{ job.status }}."
+      - name: Run on Linux server
+        run: echo "Running on a ${{ runner.os }}"
+      - name: Set Java SDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 8
+      - name: Run gradle project
+        uses: gradle/gradle-build-action@v2
+        with:
+          arguments: cucumber
+      - name: Status of job
+        run: echo " Status is ${{ job.status }}."
