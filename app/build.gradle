@@ -7,8 +7,6 @@ repositories {
 }
 
 dependencies {
-    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.22'
-
     implementation group: 'io.cucumber', name: 'cucumber-java', version: '7.0.0'
     testImplementation group: 'org.assertj', name: 'assertj-core', version: '3.21.0'
 
