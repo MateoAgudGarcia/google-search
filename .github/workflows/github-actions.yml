@@ -11,6 +11,6 @@ jobs:
         with:
           java-version: 8
       - name: Run tests
-        run: gradlew cucumber
+        run: ./gradlew cucumber
       - name: Status of job
         run: echo " Status is ${{ job.status }}."
