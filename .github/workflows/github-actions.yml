@@ -6,5 +6,5 @@ jobs:
     steps:
       - run: echo "Running on a ${{ runner.os }}"
       - name: Run on Google Chrome
-        run:
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+        run: ./gradlew cucumber
+      - run: echo " Status is ${{ job.status }}."

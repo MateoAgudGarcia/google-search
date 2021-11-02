@@ -1,7 +1,7 @@
 Feature: Search at Google
 
   Scenario: Run with Chrome
-    Given a driver for Google Chrome is configured
+    Given a driver for "Google Chrome" is configured
     When the Google website is opened
     Then it recognizes a country is verified
 
