@@ -10,9 +10,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
 
-import static com.google.search.Waits.waitVisibleWebElement;
-
-
 public class MainPage implements Searches {
     private final WebDriver WEB_DRIVER;
     private final Waits WAITS;
@@ -32,7 +29,7 @@ public class MainPage implements Searches {
     }
 
     public String nameOfCountry() {
-        waitVisibleWebElement(SERVER_COUNTRY);
+        WAITS.waitVisibleWebElement(SERVER_COUNTRY);
         return WEB_DRIVER.findElement(SERVER_COUNTRY).getText();
     }
 

@@ -11,7 +11,7 @@ Feature: Search at Google
     And the browser is closed
 
   Scenario: Run with Edge
-    Given a driver for Microsoft Edge is configured
+    Given a driver for "Microsoft Edge" is configured
     When the Google website is opened
     Then it recognizes a country is verified
 

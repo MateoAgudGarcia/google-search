@@ -4,10 +4,7 @@ import com.google.search.Waits;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import static com.google.search.Waits.waitVisibleWebElement;
-
 public class ResultPage {
-    private static final int TIMEOUT_IN_SECONDS = 10;
     private final WebDriver WEB_DRIVER;
     private final Waits WAITS;
 
@@ -23,27 +20,27 @@ public class ResultPage {
     }
 
     public String singerName() {
-        waitVisibleWebElement(FOUND_NAME);
+        WAITS.waitVisibleWebElement(FOUND_NAME);
         return WEB_DRIVER.findElement(FOUND_NAME).getText();
     }
 
     public String personalCareer() {
-        waitVisibleWebElement(FOUND_CAREER);
+        WAITS.waitVisibleWebElement(FOUND_CAREER);
         return WEB_DRIVER.findElement(FOUND_CAREER).getText();
     }
 
     public String videos() {
-        waitVisibleWebElement(VIDEOS_RECORDED);
+        WAITS.waitVisibleWebElement(VIDEOS_RECORDED);
         return WEB_DRIVER.findElement(VIDEOS_RECORDED).getText();
     }
 
     public String albums() {
-        waitVisibleWebElement(ALBUMS_RECORDED);
+        WAITS.waitVisibleWebElement(ALBUMS_RECORDED);
         return WEB_DRIVER.findElement(ALBUMS_RECORDED).getText();
     }
 
     public String films() {
-        waitVisibleWebElement(FILMS_RECORDED);
+        WAITS.waitVisibleWebElement(FILMS_RECORDED);
         return WEB_DRIVER.findElement(FILMS_RECORDED).getText();
     }
 }

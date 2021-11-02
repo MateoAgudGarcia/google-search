@@ -15,7 +15,7 @@ public class Waits {
         Waits.webDriver = webDriver;
     }
 
-    public static void waitVisibleWebElement(By element) {
+    public void waitVisibleWebElement(By element) {
         WebDriverWait temp = new WebDriverWait(webDriver, Duration.ofSeconds(TIMEOUT_IN_SECONDS));
         temp.until(ExpectedConditions.visibilityOfElementLocated(element));
     }
