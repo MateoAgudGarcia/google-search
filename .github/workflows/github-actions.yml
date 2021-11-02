@@ -11,7 +11,7 @@ jobs:
         with:
           java-version: 8
       - name: Gradle make executable
-        run: chmod +x ./gradlew
+        run: chmod +x gradlew
       - name: Run tests
         run: ./gradlew cucumber
       - name: Status of job
